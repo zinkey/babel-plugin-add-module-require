@@ -1,0 +1,7 @@
+{
+  "name": "babel-plugin-add-module-require",
+  "version": "1.0.0",
+  "description": "A plugin like babel-plugin-add-module-exports and support babel@7.",
+  "main": "index.js",
+  "author": ""
+}
