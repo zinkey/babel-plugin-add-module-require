@@ -2,7 +2,7 @@ babel-plugin-add-module-exports
 
 ---
 
-A plugin like https://github.com/59naga/babel-plugin-add-module-exports and support babel@7.
+A plugin like https://github.com/59naga/babel-plugin-add-module-exports and supports babel@7.
 
 Installation
 
@@ -16,4 +16,4 @@ Attention
 
 ---
 
-This package is used for compatibility with previous projects using X. New projects are not recommended.
+This package is used for compatibility with previous projects using babel-plugin-add-module-exports and new projects are not recommended.

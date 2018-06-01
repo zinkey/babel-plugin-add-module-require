@@ -1,7 +1,7 @@
 {
   "name": "babel-plugin-add-module-require",
-  "version": "1.0.1",
-  "description": "A plugin like babel-plugin-add-module-exports and support babel@7.",
+  "version": "1.0.2",
+  "description": "A plugin like babel-plugin-add-module-exports and supports babel@7.",
   "main": "index.js",
   "license": "MIT",
   "repository": {
