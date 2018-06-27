@@ -4,7 +4,7 @@ module.exports = function (babel) {
   return {
     visitor: {
       CallExpression(path) {
-        if (path.BABEL_PLUGIN_ADD_MODULE_REQUIRE || path.node.BABEL_PLUGIN_ADD_MODULE_REQUIRE || path.node.callee.name !== 'require' || /^\w/.test(path.node.arguments[0].value)) {
+        if (path.BABEL_PLUGIN_ADD_MODULE_REQUIRE || path.node.BABEL_PLUGIN_ADD_MODULE_REQUIRE || path.node.callee.name !== 'require' || /^[\w@]/.test(path.node.arguments[0].value)) {
           return;
         }
         const requireExpression = t.callExpression(
@@ -61,7 +61,7 @@ module.exports = function (babel) {
         path.BABEL_PLUGIN_ADD_MODULE_REQUIRE = true;
       },
       ImportDeclaration(path) {
-        if (path.BABEL_PLUGIN_ADD_MODULE_REQUIRE || /^\w/.test(path.node.source.value)) {
+        if (path.BABEL_PLUGIN_ADD_MODULE_REQUIRE || /^[\w@]/.test(path.node.source.value)) {
           return;
         }
         const requireExpression = t.callExpression(t.identifier('require'), [path.node.source]);
