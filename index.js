@@ -84,7 +84,7 @@ module.exports = function (babel) {
                 t.conditionalExpression(
                   t.binaryExpression(
                     'in',
-                    item.imported,
+                    t.stringLiteral(item.imported.name),
                     requireExpression
                   ),
                   t.memberExpression(
